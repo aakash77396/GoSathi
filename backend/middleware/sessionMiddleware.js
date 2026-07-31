@@ -3,7 +3,7 @@ const { randomUUID } = require("crypto");
 module.exports = (req, res, next) => {
 
     let sessionId =
-        req.body.CallSid ||            // Twilio
+        req.body?.CallSid ||            // Twilio
         req.headers["x-session-id"];  // Postman / Frontend
 
     if (!sessionId) {
