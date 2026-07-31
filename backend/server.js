@@ -13,7 +13,7 @@ const sessionMiddleware = require("./middleware/sessionMiddleware");
 app.use(sessionMiddleware);
 
 //TelephonyRoutes
-const TelephonyRoutes = require("./routes/TelephonyRoutes");
+const TelephonyRoutes = require("./routes/telephonyRoutes");
 app.use("/telephony",TelephonyRoutes);
 
 

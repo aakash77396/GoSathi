@@ -33,9 +33,6 @@ exports.receiveCall = async (req, res) => {
 
         const formatted = formatTrainList(trains);
 
-        // console.log("Current Session:", req.sessionId);
-        // console.log("Cache:", cache);
-        // console.log("AI Result:", aiResult);
         return res.status(200).json({
             formatted
         });
