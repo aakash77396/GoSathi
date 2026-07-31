@@ -7,9 +7,13 @@ const PORT = 5050;
 const app = express();
 app.use(express.json());
 
+// middleWare
+const sessionMiddleware = require("./middleware/sessionMiddleware");
+app.use(sessionMiddleware);
+
 //TelephonyRoutes
-const TelephonyRoutes = require("./routes/TelephonyRoutes");
-app.use("/Telephony",TelephonyRoutes);
+const TelephonyRoutes = require("./routes/telephonyRoutes");
+app.use("/telephony",TelephonyRoutes);
 
 
 app.get("/",(req,res)=>{
