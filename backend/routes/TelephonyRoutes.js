@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-const {ReceivedCall} = require("../controllers/TelephonyControllers");
+const {receiveCall} = require("../controllers/telephonyControllers");
 
 
-router.get("/call",ReceivedCall);
+router.post("/incoming",receiveCall);
 
 module.exports=router;
